@@ -59,15 +59,16 @@ export default {
   },
   methods: {
     login() {
-    //   let that = this
-    //   this.$fire.auth.signInWithEmailAndPassword(this.auth.email, this.auth.password)
-    //   .catch(function (error){
-    //     that.snackbarText = error.message
-    //     that.snackbar = true
-    //   }).then((user) => {
-    //     //we are signed in
-    //     $nuxt.$router.push('/')
-    //   })
+      let that = this
+      this.$fire.auth.signInWithEmailAndPassword(this.auth.email, this.auth.password)
+      .catch(function (error){
+        that.snackbarText = error.message
+        that.snackbar = true
+      }).then((user) => {
+        console.log(user)
+        //we are signed in
+        $nuxt.$router.push('/')
+      })
     }
   }
 }
